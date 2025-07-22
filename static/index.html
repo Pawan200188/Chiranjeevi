@@ -1,1 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TumorTracker - Advanced Brain Tumor Detection Platform</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="icon" href="/static/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="logo-container">
+            <img src="/static/logo3.png" alt="Tumor Tracker Logo" class="logo-img">
+            
+        </div>
+    </header>
+    
+    <video autoplay muted loop id="bgVideo">
+        <source src="/static/brain_video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
 
+    <div class="main-container">
+        <section class="upload-section">
+            <h2>Advanced Image Analysis</h2>
+            <p>Upload high-resolution MRI scans for AI-powered tumor detection</p>
+            
+            <div class="dropzone" id="dropzone">
+                <p>Drag and drop MRI scan here or click to upload</p>
+                <input type="file" id="fileInput" hidden accept="image/*,.dcm,.nii">
+            </div>
+            
+            <div class="preview-container" id="previewContainer">
+                <button class="tool-button" id="analyzeButton">Analyze Scan</button>
+                <div class="progress-bar" id="progressBar">
+                    <div class="progress" id="progress"></div>
+                </div>
+                <img class="preview-image" id="previewImage" alt="MRI Preview">
+            </div>
+        </section>
+
+        <section class="analysis-section">
+            <h2>Analysis Results</h2>
+            <div id="results">
+                <div class="result-item">
+                    <h3>Tumor Detection</h3>
+                    <div class="confidence-meter">
+                        <div class="confidence-level" id="confidenceLevel"></div>
+                    </div>
+                    <p id="confidenceText">Upload an image to begin analysis</p>
+                </div>
+            </div>
+
+            <div class="scan-history">
+                <h3>Recent Scans</h3>
+                <table id="historyTable">
+                    <thead>
+                        <tr>
+                            <th>File Name</th>
+                            <th>Classification</th>
+                            <th>Confidence</th>
+                        </tr>
+                    </thead>
+                    <tbody id="historyBody"></tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+
+    <div class="floating-menu">
+        <button class="float-button"id="helpButton" title="Get Help">❓</button>
+        <button class="float-button" id="chatbotButton" title="Chat Bot">💬</button>
+    </div>
+    <div class="chatbot-window" id="chatbotWindow">
+        <div class="chat-header">
+            <h3>Chat with AI</h3>
+            <button id="closeChatbot">X</button>
+        </div>
+        <div class="chat-body" id="chatBody">
+            <p class="bot-message">Hello! How can I assist you?</p>
+        </div>
+        <div class="chat-input">
+            <input type="text" id="userInput" placeholder="Type a message...">
+            <button id="sendMessage">Send</button>
+        </div>
+    </div>
+    <script src="/static/script.js"></script>
+</body>
+</html>

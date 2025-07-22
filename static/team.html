@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Team</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #065e8a, #FFFFFF);
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            color: white;
+            padding: 20px;
+        }
+        .team-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+        }
+        .member-card {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        .member-card:hover {
+            transform: scale(1.05);
+        }
+        .member-card img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .member-name {
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .social-links a {
+            text-decoration: none;
+            margin: 5px;
+            font-size: 18px;
+            color: #065e8a;
+            transition: color 0.3s;
+        }
+        .social-links a:hover {
+            color: #ff6f61;
+        }
+    </style>
+</head>
+<body>
+    <h1>Meet Our Team</h1>
+    <div class="team-container">
+        <div class="member-card">
+            <img src="member1.jpg" alt="Member 1">
+            <div class="member-name">John Doe</div>
+            <div class="social-links">
+                <a href="#" target="_blank">LinkedIn</a>
+                <a href="#" target="_blank">GitHub</a>
+                <a href="#" target="_blank">Instagram</a>
+            </div>
+        </div>
+        <div class="member-card">
+            <img src="member2.jpg" alt="Member 2">
+            <div class="member-name">Jane Smith</div>
+            <div class="social-links">
+                <a href="#" target="_blank">LinkedIn</a>
+                <a href="#" target="_blank">GitHub</a>
+                <a href="#" target="_blank">Instagram</a>
+            </div>
+        </div>
+        <!-- Add more team members as needed -->
+    </div>
+</body>
+</html>
